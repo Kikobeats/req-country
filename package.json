@@ -1,20 +1,20 @@
 {
-  "name": "request-country",
+  "name": "req-country",
   "description": "Given a request, get the country code. ISO 3166-1 alpha-2 compliant.",
-  "homepage": "https://nicedoc.io/Kikobeats/request-country",
+  "homepage": "https://nicedoc.io/Kikobeats/req-country",
   "version": "0.0.0",
   "main": "src/index.js",
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kikobeats/request-country.git"
+    "url": "git+https://github.com/Kikobeats/req-country.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/request-country/issues"
+    "url": "https://github.com/Kikobeats/req-country/issues"
   },
   "keywords": [
     "country",
@@ -28,13 +28,11 @@
     "fast-geoip": "~1.1.8",
     "request-ip": "~2.1.3"
   },
-  "files": [
-    "src"
-  ],
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "ava": "latest",
+    "ci-publish": "latest",
     "conventional-github-releaser": "latest",
     "coveralls": "latest",
     "finepack": "latest",
@@ -47,12 +45,14 @@
     "prettier-standard": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
-    "standard-version": "latest",
-    "ci-publish": "latest"
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 12"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
