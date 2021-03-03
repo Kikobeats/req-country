@@ -2,7 +2,7 @@
   "name": "request-country",
   "description": "Given a request, get the country code. ISO 3166-1 alpha-2 compliant.",
   "homepage": "https://nicedoc.io/Kikobeats/request-country",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
