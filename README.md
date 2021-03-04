@@ -39,7 +39,7 @@ const countryVat = require('country-vat')
 module.exports = (req, res) => {
   const country = requestCountry(req)
 
-  console.log({eeaMember: eeaMember(country), euMember: euMember(country) })
+  console.log({ eeaMember: eeaMember(country), euMember: euMember(country) })
   // => { eeaMember: true, euMember: true }
 
   console.log(countryVat(country))
