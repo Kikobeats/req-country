@@ -20,22 +20,31 @@ $ npm install req-country --save
 ```js
 const requestCountry = require('req-country')
 
-const country = requestCountry(req)
+module.exports = (req, res) => {
+  const country = requestCountry(req)
 
-console.log({ country })
-// => { country: 'ES' }
+  console.log({ country })
+  // => { country: 'ES' }
+}
 ```
 
-You can combine it with [`is-european`](https://github.com/Kikobeats/is-european):
+You can combine it with [`is-european`](https://github.com/Kikobeats/is-european) and [`country-vat`](https://github.com/Kikobeats/country-vat):
+
 
 ```js
-const requestCountry = require('req-country')
 const { eeaMember, euMember } = require('is-european')
+const requestCountry = require('req-country')
+const countryVat = require('country-vat')
 
-const country = requestCountry(req)
+module.exports = (req, res) => {
+  const country = requestCountry(req)
 
-console.log({eeaMember: eeaMember(country), euMember: euMember(country) })
-// => { eeaMember: true, euMember: true }
+  console.log({eeaMember: eeaMember(country), euMember: euMember(country) })
+  // => { eeaMember: true, euMember: true }
+
+  console.log(countryVat(country))
+  // => 0.21
+}
 ```
 
 ## License
