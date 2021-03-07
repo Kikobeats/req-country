@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Kikobeats/req-country/compare/v1.1.0...v1.2.0) (2021-03-07)
+
+
+### Features
+
+* add google app engine support ([20b274c](https://github.com/Kikobeats/req-country/commit/20b274c7047ede4b63f51b9435946066317d4b73))
+
 ## [1.1.0](https://github.com/Kikobeats/req-country/compare/v1.0.0...v1.1.0) (2021-03-07)
 
 
