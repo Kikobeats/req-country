@@ -10,6 +10,12 @@ module.exports = async (req = {}) => {
     if (req.headers['cf-ipcountry']) {
       return req.headers['cf-ipcountry']
     }
+
+    // Getting from Vercel
+    // https://vercel.com/changelog/ip-geolocation-for-serverless-functions
+    if (req.headers['x-vercel-ip-country']) {
+      return req.headers['x-vercel-ip-country']
+    }
   }
 
   const ipAddress = req.ipAddress || req.ip || requestIp.getClientIp(req)
