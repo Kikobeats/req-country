@@ -3,33 +3,35 @@
 const requestIp = require('request-ip')
 const geoip = require('fast-geoip')
 
-module.exports = async (req = {}) => {
-  if (req.headers) {
-    // Getting from Cloudflare
-    // https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-
-    if (req.headers['cf-ipcountry']) {
-      return req.headers['cf-ipcountry']
-    }
+const pickHeader = name => ({ headers = {} }) => headers[name]
 
-    // Getting from Vercel
-    // https://vercel.com/changelog/ip-geolocation-for-serverless-functions
-    if (req.headers['x-vercel-ip-country']) {
-      return req.headers['x-vercel-ip-country']
-    }
+const providers = [
+  // Getting from Cloudflare
+  // https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-
+  pickHeader('cf-ipcountry'),
+  // Getting from Vercel
+  // https://vercel.com/changelog/ip-geolocation-for-serverless-functions
+  pickHeader('x-vercel-ip-country'),
+  // Getting from Google App Engine
+  // https://cloud.google.com/appengine/docs/standard/java11/reference/request-response-headers
+  pickHeader('x-appengine-country')
+]
 
-    // Getting from Google App Engine
-    // https://cloud.google.com/appengine/docs/standard/java11/reference/request-response-headers
-    if (req.headers['x-appengine-country']) {
-      return req.headers['x-appengine-country']
-    }
-  }
+const fromProvider = req => {
+  let provider
+  providers.find(fromProvider => (provider = fromProvider(req)))
+  return provider
+}
 
+const fromIpAddress = async req => {
   const ipAddress = req.ipAddress || req.ip || requestIp.getClientIp(req)
 
   if (ipAddress) {
     const geo = await geoip.lookup(ipAddress)
     if (geo) return geo.country
   }
+}
 
-  return null
+module.exports = async (req = {}) => {
+  return fromProvider(req) || (await fromIpAddress(req)) || null
 }

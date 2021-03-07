@@ -9,6 +9,20 @@ test('from headers.cf-ipcountry', async t => {
   t.is(country, 'ES')
 })
 
+test('from headers.x-vercel-ip-country', async t => {
+  const country = await requestCountry({
+    headers: { 'x-vercel-ip-country': 'ES' }
+  })
+  t.is(country, 'ES')
+})
+
+test('from headers.x-appengine-country', async t => {
+  const country = await requestCountry({
+    headers: { 'x-appengine-country': 'ES' }
+  })
+  t.is(country, 'ES')
+})
+
 test('from IPv4', async t => {
   const country = await requestCountry({ ipAddress: '83.52.63.194' })
   t.is(country, 'ES')
