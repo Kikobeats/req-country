@@ -16,6 +16,12 @@ module.exports = async (req = {}) => {
     if (req.headers['x-vercel-ip-country']) {
       return req.headers['x-vercel-ip-country']
     }
+
+    // Getting from Google App Engine
+    // https://cloud.google.com/appengine/docs/standard/java11/reference/request-response-headers
+    if (req.headers['x-appengine-country']) {
+      return req.headers['x-appengine-country']
+    }
   }
 
   const ipAddress = req.ipAddress || req.ip || requestIp.getClientIp(req)

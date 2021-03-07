@@ -17,12 +17,15 @@
     "url": "https://github.com/Kikobeats/req-country/issues"
   },
   "keywords": [
+    "cf-ipcountry",
     "country",
     "geoip",
     "geolite",
     "geolocation",
     "iso-31661",
-    "iso-31661-alpha2"
+    "iso-31661-alpha2",
+    "x-appengine-country",
+    "x-vercel-ip-country"
   ],
   "dependencies": {
     "fast-geoip": "~1.1.8",
