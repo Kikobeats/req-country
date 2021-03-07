@@ -32,6 +32,5 @@ const fromIpAddress = async req => {
   }
 }
 
-module.exports = async (req = {}) => {
-  return fromProvider(req) || (await fromIpAddress(req)) || null
-}
+module.exports = async (req = {}) =>
+  fromProvider(req) || (await fromIpAddress(req)) || null
