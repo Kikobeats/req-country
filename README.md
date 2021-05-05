@@ -1,8 +1,6 @@
 # req-country
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/req-country.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/com/Kikobeats/req-country/master.svg?style=flat-square)](https://travis-ci.com/Kikobeats/req-country)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/req-country.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/req-country)
 [![Dependency status](https://img.shields.io/david/Kikobeats/req-country.svg?style=flat-square)](https://david-dm.org/Kikobeats/req-country)
 [![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/req-country.svg?style=flat-square)](https://david-dm.org/Kikobeats/req-country#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/req-country.svg?style=flat-square)](https://www.npmjs.org/package/req-country)
