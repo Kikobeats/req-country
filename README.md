@@ -1,9 +1,8 @@
 # req-country
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/req-country.svg?style=flat-square)
-[![Dependency status](https://img.shields.io/david/Kikobeats/req-country.svg?style=flat-square)](https://david-dm.org/Kikobeats/req-country)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/req-country.svg?style=flat-square)](https://david-dm.org/Kikobeats/req-country#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/req-country.svg?style=flat-square)](https://www.npmjs.org/package/req-country)
+[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/req-country.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/req-country)
 
 > Given a request, get the country associated with it. ISO 3166-1 alpha-2 compliant.
 
