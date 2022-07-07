@@ -29,7 +29,7 @@
   ],
   "dependencies": {
     "fast-geoip": "~1.1.11",
-    "request-ip": "~3.0.2"
+    "request-ip": "~3.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
