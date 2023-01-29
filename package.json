@@ -2,7 +2,7 @@
   "name": "req-country",
   "description": "Given a request, get the country code. ISO 3166-1 alpha-2 compliant.",
   "homepage": "https://github.com/Kikobeats/req-country",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
