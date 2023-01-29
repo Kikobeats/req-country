@@ -1,7 +1,7 @@
 {
   "name": "req-country",
   "description": "Given a request, get the country code. ISO 3166-1 alpha-2 compliant.",
-  "homepage": "https://nicedoc.io/Kikobeats/req-country",
+  "homepage": "https://github.com/Kikobeats/req-country",
   "version": "1.2.6",
   "main": "src/index.js",
   "author": {
@@ -56,7 +56,7 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
-    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
